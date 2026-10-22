@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arcade</title>
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #eef1f8;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(1000px 500px at 0% -10%, #2b1f63, transparent 60%),
+    radial-gradient(900px 500px at 100% 0%, #0d3f4d, transparent 55%),
+    #0b0e19;
+}
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+header { padding: 56px 0 24px; }
+h1 { margin: 0; font-size: clamp(2.2rem, 6vw, 3.4rem); letter-spacing: -0.03em; }
+header p { margin: 10px 0 0; color: #97a0b8; font-size: 1.05rem; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 20px;
+  padding-bottom: 60px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #151a2c;
+  border: 1px solid #242b46;
+  border-radius: 20px;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.card:hover, .card:focus-visible {
+  transform: translateY(-4px);
+  border-color: #3c4674;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+}
+.art { height: 160px; display: grid; place-items: center; font-size: 4.5rem; }
+.a1 { background: linear-gradient(135deg, #f6c95a, #b97812); }
+.a2 { background: linear-gradient(135deg, #3b6fe0, #0e2448); }
+.a3 { background: linear-gradient(135deg, #8fd9e3, #3d8a26); }
+.info { padding: 18px 20px 22px; }
+.info h2 { margin: 0 0 6px; font-size: 1.2rem; }
+.info p { margin: 0; color: #97a0b8; font-size: 0.95rem; line-height: 1.45; }
+.btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: #7c5cff;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Arcade</h1>
+    <p>Tres juegos para pasar el rato. Elige uno y empieza.</p>
+  </header>
+  <main class="grid">
+    <a class="card" href="clicker.html">
+      <div class="art a1">💰</div>
+      <div class="info">
+        <h2>Clicker de dinero</h2>
+        <p>Haz clic, compra ayudantes y avanza de etapa hasta el Imperio.</p>
+        <span class="btn">Jugar</span>
+      </div>
+    </a>
+    <a class="card" href="ascenso.html">
+      <div class="art a2">⛰️</div>
+      <div class="info">
+        <h2>Ascenso</h2>
+        <p>Sube la montaña, derrota monstruos y explora cuevas y lagos.</p>
+        <span class="btn">Jugar</span>
+      </div>
+    </a>
+    <a class="card" href="flappy.html">
+      <div class="art a3">🐦</div>
+      <div class="info">
+        <h2>Flappy</h2>
+        <p>Esquiva los tubos y supera tu mejor puntuación.</p>
+        <span class="btn">Jugar</span>
+      </div>
+    </a>
+  </main>
+</div>
+</body>
+</html>
